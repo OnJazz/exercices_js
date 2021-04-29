@@ -5,19 +5,34 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mon super site cool</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.menu.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.boutonMagique.css'>
+    
 </head>
 <body>
     <nav class="menu">
         <ul>
-            <li><a href="../index.html"> Formulaire</a></li>
-            <li><a href="images.html">Images</a></li>
-            <li><a href="calculatrice.html">Calculatrice</a></li>
-            <li><a href="boutonMagique.html"> Bouton Magique</a></li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="../index.html"> Formulaire</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="images.html">Images</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="calculatrice.html">Calculatrice</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="boutonMagique.html"> Bouton Magique</a>
+            </li>
         </ul>
     </nav>
 
-    
+    <button onmouseover="mooveButton(this)">Bouton Magique</button>
+
+    <script src='../scripts/script.bouton.magique.js'></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+
+form{
+    background-color: yellow;
+    padding: 15px;
+    margin-left: 250px;
+    margin-right: 650px; 
+    border-radius: 20px;
+  }
+  .sexe{
+    display: block ruby;
+  }
+  #valider{
+    position: relative;
+    left: 50%;
+  }
+  

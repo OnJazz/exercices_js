@@ -5,48 +5,100 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mon super site cool</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.menu.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/style.calculatrice.css'>
 </head>
 <body>
     <nav class="menu">
         <ul>
-            <li><a href="../index.html"> Formulaire</a></li>
-            <li><a href="images.html">Images</a></li>
-            <li><a href="calculatrice.html">Calculatrice</a></li>
-            <li><a href="boutonMagique.html"> Bouton Magique</a></li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="../index.html"> Formulaire</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="images.html">Images</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="calculatrice.html">Calculatrice</a>
+            </li>
+            <li>
+                <img src="../assets/img/pacman.png" alt="une image de pacman">
+                <a href="boutonMagique.html"> Bouton Magique</a>
+            </li>
         </ul>
     </nav>
 
-    <section>
-        <div id="nuemro">
-            <button onclick="changerValeurInput(1)">1</button>
-            <button onclick="changerValeurInput(2)">2</button>
-            <button onclick="changerValeurInput(3)">3</button>
-            <button onclick="changerValeurInput(4)">4</button>
-            <button onclick="changerValeurInput(5)">5</button>
-            <button onclick="changerValeurInput(6)">6</button>
-            <button onclick="changerValeurInput(7)">7</button>
-            <button onclick="changerValeurInput(8)">8</button>
-            <button onclick="changerValeurInput(9)">9</button>
-        </div>
-        <button id="zero" onclick="changerValeurInput(0)">0</button>
-        <div id="operateurs">
-            <button onclick="changerValeurOperateur('*')">x</button>
-            <button onclick="changerValeurOperateur('/')">/</button>
-            <button onclick="changerValeurOperateur('+')">+</button>
-            <button onclick="changerValeurOperateur('-')">-</button>
-        </div>
-        <button onclick="majResultat()">=</button>
-        <button onclick="reset()">C</button>
-        <button onclick="resetOneInput()"> &lt;=</button>
+    <table>
+        <tr>
+          <td colspan="4" align="right" id="case">
+            <span id="calc-output"></span>
+          </td>
+        </tr>
+     </table>
+     <table>
+       <tr>
+         <td>
+           <input class="number" type="button" value="1" id="button-1" onclick="btm(1)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="2" id="button-2" onclick="btm(2)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="3" id="button-3" onclick="btm(3)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="C" id="button-C" onclick="btmClean()"/>
+         </td>
+       </tr>
 
-        <input type="number" id="nbr1" name="nbr1" value="" onfocus="changerEcritureInput(this)">
-        <input type="text" id="operateur" name="operateur" value="+" >
-        <input type="number" id="nbr2" name="nbr2" value=""  onfocus="changerEcritureInput(this)" >
+       <tr>
+         <td>
+           <input class="number" type="button" value="4" id="button-4" onclick="btm(4)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="5" id="button-5" onclick="btm(5)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="6" id="button-6" onclick="btm(6)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="+" id="button-+" onclick="btmPlus()"/>
+         </td>
+       </tr>
 
-        <p>Resultat : </p>
-        <p id="resultat"></p>
-    </section>
+       <tr>
+         <td>
+           <input class="number" type="button" value="7" id="button-7" onclick="btm(7)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="8" id="button-8" onclick="btm(8)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="9" id="button-9" onclick="btm(9)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="-" id="button--" onclick="btmLess()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="operator" type="button" value="x" id="button-*" onclick="btmMultiply()"/>
+         </td>
+         <td>
+           <input class="number"type="button" value="0" id="button-0" onclick="btm(0)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="÷" id="button-/" onclick="btmDivision()"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="=" id="button-=" onclick="btmEgal()"/>
+         </td>
+       </tr>
+
+     </table>
 
     <script src='../scripts/script.calculatrice.js'></script>
 </body>
