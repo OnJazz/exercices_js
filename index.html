@@ -19,38 +19,39 @@
     </nav>
 
     <form onsubmit="inscription(this)">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom"  >
+        <section>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" value="YourName" >
 
-        <label for="prenom">Prenom :</label>
-        <input type="text" id="prenom" name="prenom"  >
-        
-        <label for="age"> Age:</label>
-        <input type="number" id="age" name="age">
-
-        <div>
-            <p>Sexe :</p>
-
-            <label for="Mr">Mr</label>
-            <input type="radio" id="Mr" name="sexe" value="Mr">
-
-            <label for="Mme">Mme</label>
-            <input type="radio" id="Mme" name="sexe" value="Mme">
+            <label for="prenom">Prenom :</label>
+            <input type="text" id="prenom" name="prenom" value="YourLastName" >
             
-        </div>
+            <label for="age"> Age:</label>
+            <input type="number" id="age" name="age" min="1" value= 1>
 
-        <div>
-            <label for="ville-select"> Choisir une ville</label>
-            <select name="villes" id="ville-select">
-                <option value="">--Choisissez une ville--</option>
-                <option value="Lille">Lille</option>
-                <option value="Paris">Paris</option>
-                <option value="Toulouse">Toulouse</option>
-                <option value="Bordeaux">Bordeaux</option>
-                <option value="Nantes">Nantes</option>
-                <option value="Marseille">Marseille</option>
-            </select>
-        </div>
+            <div>
+                <p>Sexe :</p>
+
+                <label for="Mr">Mr</label>
+                <input type="radio" id="Mr" name="sexe" value="Mr" checked>
+
+                <label for="Mme">Mme</label>
+                <input type="radio" id="Mme" name="sexe" value="Mme">
+                
+            </div>
+            <div>
+                <label for="ville-select"> Choisir une ville</label>
+                <select name="villes" id="ville-select">
+                    <option value="...">--Choisissez une ville--</option>
+                    <option value="Lille">Lille</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Toulouse">Toulouse</option>
+                    <option value="Bordeaux">Bordeaux</option>
+                    <option value="Nantes">Nantes</option>
+                    <option value="Marseille">Marseille</option>
+                </select>
+            </div>
+        </section>
         <button type="submit">Valider</button>
         
     </form>
