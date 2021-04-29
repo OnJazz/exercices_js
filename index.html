@@ -6,7 +6,7 @@
     <title>Mon super site cool</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='./scripts/script.index.js'></script>
 </head>
 <body>
     <nav class="menu">
@@ -18,7 +18,7 @@
         </ul>
     </nav>
 
-    <form action="">
+    <form onsubmit="inscription(this)">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom"  >
 
@@ -26,7 +26,7 @@
         <input type="text" id="prenom" name="prenom"  >
         
         <label for="age"> Age:</label>
-        <input type="age" id="age" name="age">
+        <input type="number" id="age" name="age">
 
         <div>
             <p>Sexe :</p>
@@ -51,8 +51,6 @@
                 <option value="Marseille">Marseille</option>
             </select>
         </div>
-        
-        
         <button type="submit">Valider</button>
         
     </form>
