@@ -6,7 +6,6 @@
     <title>Mon super site cool</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 <body>
     <nav class="menu">
@@ -18,6 +17,37 @@
         </ul>
     </nav>
 
-    
+    <section>
+        <div id="nuemro">
+            <button onclick="changerValeurInput(1)">1</button>
+            <button onclick="changerValeurInput(2)">2</button>
+            <button onclick="changerValeurInput(3)">3</button>
+            <button onclick="changerValeurInput(4)">4</button>
+            <button onclick="changerValeurInput(5)">5</button>
+            <button onclick="changerValeurInput(6)">6</button>
+            <button onclick="changerValeurInput(7)">7</button>
+            <button onclick="changerValeurInput(8)">8</button>
+            <button onclick="changerValeurInput(9)">9</button>
+        </div>
+        <button id="zero" onclick="changerValeurInput(0)">0</button>
+        <div id="operateurs">
+            <button onclick="changerValeurOperateur('*')">x</button>
+            <button onclick="changerValeurOperateur('/')">/</button>
+            <button onclick="changerValeurOperateur('+')">+</button>
+            <button onclick="changerValeurOperateur('-')">-</button>
+        </div>
+        <button onclick="majResultat()">=</button>
+        <button onclick="reset()">C</button>
+        <button onclick="resetOneInput()"> &lt;=</button>
+
+        <input type="number" id="nbr1" name="nbr1" value="" onfocus="changerEcritureInput(this)">
+        <input type="text" id="operateur" name="operateur" value="+" >
+        <input type="number" id="nbr2" name="nbr2" value=""  onfocus="changerEcritureInput(this)" >
+
+        <p>Resultat : </p>
+        <p id="resultat"></p>
+    </section>
+
+    <script src='../scripts/script.calculatrice.js'></script>
 </body>
 </html>
